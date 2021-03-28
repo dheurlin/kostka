@@ -1,0 +1,7 @@
+cradle:
+  cabal:
+    - path: "./"
+      component: "lib:kostka"
+
+    - path: "./Main.hs"
+      component: "kostka:exe:kostka"
