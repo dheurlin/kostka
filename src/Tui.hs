@@ -21,7 +21,7 @@ import Brick.Widgets.Border
 import Graphics.Vty
 
 
--- | Draws the Kostka GUI
+-- | Draws the Kostka TUI
 tui :: IO ()
 tui = do
   eventChan    <- Brick.BChan.newBChan 10
@@ -40,7 +40,7 @@ countdownTick chan = go 3
           threadDelay 1_000_000
           go (n-1)
 
--- Starts the timer and generates an event every millisecond to update the timer in the UI
+-- Starts the timer and generates an event every centisecond to update the timer in the UI
 timerTick :: BChan CustomEvent -> IO ()
 timerTick chan = do
   start <- getCurrentTime
@@ -114,7 +114,7 @@ drawTui ts =
         shuffle <=>
         hold    <=>
         time
-  in [ border contents ]
+  in [ border $ center contents ]
 
 -- The widget prompting the user to press space
 holdWidget :: TuiState -> Widget n

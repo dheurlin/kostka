@@ -15,7 +15,7 @@ TUI toolkit.
 ## Installation
 
 This project requires **Haskell** and **cabal** to be built. If you have these
-installed, simply clone this repo, `cd` into it's directory and run `cabal
+installed, simply clone this repo, `cd` into its directory and run `cabal
 install`. Once this is done, the `kostka` binary should be available in
 `$HOME/.cabal/bin`. You may have to add this directory to your `$PATH` for the
 executable to be available.
