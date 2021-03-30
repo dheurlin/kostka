@@ -20,6 +20,11 @@ install`. Once this is done, the `kostka` binary should be available in
 `$HOME/.cabal/bin`. You may have to add this directory to your `$PATH` for the
 executable to be available.
 
+## Running
+
+`kostka` launches the TUI interface.
+`kostka shuffle` simply generates a shuffle and prints it to stdout.
+
 ## Future features
 
 I will implement these if I feel like it
