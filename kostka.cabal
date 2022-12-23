@@ -15,11 +15,12 @@ library
   hs-source-dirs: ./src
   other-modules: Paths_kostka
   build-depends:
-      base >=4.13 && <4.14
+      base >=4.13 && <4.15
     , random
     , vty
     , brick
     , time
+    , lens
 
 executable kostka
   main-is:             Main.hs
@@ -27,7 +28,7 @@ executable kostka
   other-modules: Paths_kostka
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.13 && <4.14
+      base >=4.13 && <4.15
     , random
     , kostka
     , vty
