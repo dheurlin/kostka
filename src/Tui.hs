@@ -149,9 +149,8 @@ handleTuiEvent (VtyEvent vtye) =
     EvKey (KChar ' ') [] -> use tuiStateMain >>= \case
         -- Start the countdown
         Passive -> do
-          s <- get
-          liftIO $ forkIO $ countdownTick (_tuiStateEventChan s)
-          put $ s { _tuiStateMain = CountingDown 3 }
+          liftIO . forkIO . countdownTick =<< use tuiStateEventChan
+          tuiStateMain .= CountingDown 3
         -- Stop the timer
         Running -> do
           -- kill the timer thread
